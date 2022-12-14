@@ -1,4 +1,7 @@
-﻿namespace BlazorAnimations.Pages;
+﻿using System;
+using System.Threading.Tasks;
+
+namespace BlazorAnimations.Pages;
 
 public partial class TurningCircles
 {

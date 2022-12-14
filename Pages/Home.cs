@@ -1,4 +1,6 @@
-﻿namespace BlazorAnimations.Pages;
+﻿using System;
+
+namespace BlazorAnimations.Pages;
 
 public partial class Home
 {
