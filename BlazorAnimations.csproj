@@ -23,5 +23,9 @@
       </Compile>
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include=".github\workflows\GitHub-Pages.yml" />
+    </ItemGroup>
+
 
 </Project>
