@@ -15,7 +15,8 @@ body {
 #CircleWrapper {
     position: relative;
     top: 0;
-    left: 0;
+    left: 50%;
+    margin-left: -50vh;
     width: 100vh;
     height: 100vh;
     display: grid;

@@ -15,6 +15,10 @@ body {
 #ShapesWrapper {
     aspect-ratio: 1.618;
     width: 90vmin;
+    left: 50%;
+    margin-left: -45vmin;
+    top: 50%;
+    margin-top: -27.8115vmin;
     position: relative;
 }
 
