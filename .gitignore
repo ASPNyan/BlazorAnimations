@@ -20,3 +20,4 @@ fabric.properties
 /dataSources.local.xml
 bin/
 obj/
+dist/
