@@ -19,7 +19,7 @@ body {
     margin-left: -45vmin;
     top: 50%;
     margin-top: -27.8115vmin;
-    position: relative;
+    position: absolute;
 }
 
 #ShapesWrapper > .shape {
