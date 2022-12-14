@@ -1,0 +1,86 @@
+﻿@page "/TurningCircles"
+@inject NavigationManager NavigationManager
+
+<PageTitle>Turning Circles</PageTitle>
+
+<link href="css/TurningCircles.css" rel="stylesheet" />
+<link href="css/Back.css" rel="stylesheet" />
+
+<div id="CircleWrapper">
+    <div class="Circle" Size="1">
+        <div class="DualSixth" style="--Top-Color: @RandRGB(); --Base-Color: @RandRGB()"></div>
+        <div class="DualSixth" style="--Top-Color: @RandRGB(); --Base-Color: @RandRGB()"></div>
+        <div class="DualSixth" style="--Top-Color: @RandRGB(); --Base-Color: @RandRGB()"></div>
+    </div>
+    <div class="Backing" Size="1">
+        <div class="DualSixth" style="--Top-Color: @RandRGB(); --Base-Color: @RandRGB()"></div>
+        <div class="DualSixth" style="--Top-Color: @RandRGB(); --Base-Color: @RandRGB()"></div>
+        <div class="DualSixth" style="--Top-Color: @RandRGB(); --Base-Color: @RandRGB()"></div>
+    </div>
+    <div class="Circle" Size="2">
+        <div class="DualSixth" style="--Top-Color: @RandRGB(); --Base-Color: @RandRGB()"></div>
+        <div class="DualSixth" style="--Top-Color: @RandRGB(); --Base-Color: @RandRGB()"></div>
+        <div class="DualSixth" style="--Top-Color: @RandRGB(); --Base-Color: @RandRGB()"></div>
+    </div>
+    <div class="Backing" Size="2">
+        <div class="DualSixth" style="--Top-Color: @RandRGB(); --Base-Color: @RandRGB()"></div>
+        <div class="DualSixth" style="--Top-Color: @RandRGB(); --Base-Color: @RandRGB()"></div>
+        <div class="DualSixth" style="--Top-Color: @RandRGB(); --Base-Color: @RandRGB()"></div>
+    </div>
+</div>
+
+
+<div id="BackArrow" onclick="@Home"></div>
+
+<style>
+    #CircleWrapper > .Circle > .DualSixth:nth-child(1) {
+        transform: rotate(@Rotation(1));
+    }
+    #CircleWrapper > .Circle > .DualSixth:nth-child(2) {
+        transform: rotate(@Rotation(2));
+    }
+    #CircleWrapper > .Circle > .DualSixth:nth-child(3) {
+        transform: rotate(@Rotation(3));
+    }
+    #CircleWrapper > .Backing > .DualSixth:nth-child(1) {
+        transform: rotate(@Rotation(1));
+    }
+    #CircleWrapper > .Backing > .DualSixth:nth-child(2) {
+        transform: rotate(@Rotation(2));
+    }
+    #CircleWrapper > .Backing > .DualSixth:nth-child(3) {
+        transform: rotate(@Rotation(3));
+    }
+    #CircleWrapper > .Circle[Size="2"] > .DualSixth:nth-child(1) {
+        transform: rotate(@AltRotation(1));
+    }
+    #CircleWrapper > .Circle[Size="2"] > .DualSixth:nth-child(2) {
+        transform: rotate(@AltRotation(2));
+    }
+    #CircleWrapper > .Circle[Size="2"] > .DualSixth:nth-child(3) {
+        transform: rotate(@AltRotation(3));
+    }
+    #CircleWrapper > .Backing[Size="2"] > .DualSixth:nth-child(1) {
+        transform: rotate(@AltRotation(1));
+    }
+    #CircleWrapper > .Backing[Size="2"] > .DualSixth:nth-child(2) {
+        transform: rotate(@AltRotation(2));
+    }
+    #CircleWrapper > .Backing[Size="2"] > .DualSixth:nth-child(3) {
+        transform: rotate(@AltRotation(3));
+    }
+</style>
+
+@code {
+    private void Home()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(1);
+        await Animate();
+    }
+
+}

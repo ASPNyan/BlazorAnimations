@@ -1,0 +1,53 @@
+﻿@page "/"
+@inject NavigationManager NavigationManager
+
+<PageTitle>BlazorAnimations - Home</PageTitle>
+
+<link href="css/Home.css" rel="stylesheet" />
+
+<div id="IndexWrapper" Position="@Position">
+    <div class="ShapesButton" Roundness="@ShapesRoundness" onclick="@GoToShapes"></div>
+    <div class="CirclesButton" Roundness="@CirclesRoundness" onclick="@GoToCircles"></div>
+    <div class="OtherButton" Roundness="@OtherRoundness"></div>
+</div>
+
+
+@code {
+    bool Animate = true;
+    private int Position = 1;
+
+    int ShapesRoundness;
+    int CirclesRoundness;
+    int OtherRoundness;
+
+    protected override async Task OnInitializedAsync()
+    {
+        ChangeRound();
+        await Task.Delay(1600);
+        
+        while (Animate)
+        {
+            ChangeRound();
+            Position++;
+            if (Position == 4) Position = 1;
+            ChangeRound();
+            await Task.Delay(2000);
+            ChangeRound();
+            await Task.Delay(2000);
+            ChangeRound();
+            await Task.Delay(2000);
+        }
+    }
+    
+    private void GoToShapes()
+    {
+        Animate = false;
+        NavigationManager.NavigateTo("/LivingShapes");
+    }
+
+    private void GoToCircles()
+    {
+        Animate = false;
+        NavigationManager.NavigateTo("/TurningCircles");
+    }
+}
