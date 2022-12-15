@@ -12,6 +12,22 @@ body {
     overflow: hidden;
 }
 
+#HomeText {
+    --Color: deeppink;
+    position: absolute;
+    top: 1vh;
+    left: 50%;
+    margin-left: -25%;
+    margin-top: 0;
+    border-bottom: 2vh;
+    width: 50%;
+    color: var(--Color);
+    font-size: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    transition: color 400ms ease-in-out;
+}
+
 .ShapesButton {
     width: 20vw;
     height: 20vw;

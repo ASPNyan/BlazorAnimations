@@ -5,6 +5,8 @@
 
 <link href="css/Home.css" rel="stylesheet" />
 
+<p id="HomeText" style="--Color: @TextColor">Click a Box To View a Different Window!</p>
+
 <div id="IndexWrapper" Position="@Position">
     <div class="ShapesButton" Roundness="@ShapesRoundness" onclick="@GoToShapes"></div>
     <div class="CirclesButton" Roundness="@CirclesRoundness" onclick="@GoToCircles"></div>
@@ -13,6 +15,8 @@
 
 
 @code {
+    string TextColor = "deeppink";
+    
     bool Animate = true;
     private int Position = 1;
 
@@ -29,7 +33,22 @@
         {
             ChangeRound();
             Position++;
-            if (Position == 4) Position = 1;
+            switch (Position)
+            {
+                case 1:
+                    TextColor = "deeppink";
+                    break;
+                case 2:
+                    TextColor = "cyan";
+                    break;
+                case 3:
+                    TextColor = "yellow";
+                    break;
+                case 4:
+                    Position = 1;
+                    TextColor = "deeppink";
+                    break;
+            }
             ChangeRound();
             await Task.Delay(2000);
             ChangeRound();

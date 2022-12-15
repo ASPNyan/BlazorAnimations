@@ -1,4 +1,4 @@
-# BlazorAnimations
+# [BlazorAnimations](https://aspnyan.pages.dev/)
 Who knew CSS and C# could be used together? Not me, until like a week ago :shrug:
 
 ---
@@ -7,7 +7,7 @@ My hard drive with all my most recent in-progress projects corrupted so I said f
 
 So that's what this is, one thing I can say is CSS & HTML/Razor is **so** much better than WPF and WinForms, those are horrible now that I look back.
 
-Either way, this is a cool project I spent like a week, maybe two, on so don't expect an incredible, enterprise-level website, it just has some cool animations.
+Either way, this is a cool project I spent like a week, maybe two, on so don't expect an incredible, enterprise-level website, it just has some cool animations. You can find it hosted [here](https://aspnyan.pages.dev/)
 
 ---
 
