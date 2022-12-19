@@ -77,22 +77,46 @@ body {
     transition-timing-function: ease-in-out;
 }
 
-#CircleWrapper > .Circle[Size="1"] > .DualSixth {
-    --Vert-Border: 45vh;
-    --Side-Border: 25vh;
+@media (max-width: 100vh) {
+    #CircleWrapper > .Circle[Size="1"] > .DualSixth {
+        --Vert-Border: 45vw;
+        --Side-Border: 25vw;
+    }
+
+    #CircleWrapper > .Circle[Size="2"] > .DualSixth {
+        --Vert-Border: 32vw;
+        --Side-Border: 18vw;
+    }
+
+    #CircleWrapper > .Backing[Size="1"] > .DualSixth {
+        --Vert-Border: 38vw;
+        --Side-Border: 25vw;
+    }
+
+    #CircleWrapper > .Backing[Size="2"] > .DualSixth {
+        --Vert-Border: 27vw;
+        --Side-Border: 20vw;
+    }
 }
 
-#CircleWrapper > .Circle[Size="2"] > .DualSixth {
-    --Vert-Border: 32vh;
-    --Side-Border: 18vh;
-}
+@media (min-width: 100vh) {
+    #CircleWrapper > .Circle[Size="1"] > .DualSixth {
+        --Vert-Border: 45vh;
+        --Side-Border: 25vh;
+    }
 
-#CircleWrapper > .Backing[Size="1"] > .DualSixth {
-    --Vert-Border: 38vh;
-    --Side-Border: 25vh;
-}
+    #CircleWrapper > .Circle[Size="2"] > .DualSixth {
+        --Vert-Border: 32vh;
+        --Side-Border: 18vh;
+    }
 
-#CircleWrapper > .Backing[Size="2"] > .DualSixth {
-    --Vert-Border: 27vh;
-    --Side-Border: 20vh;
+    #CircleWrapper > .Backing[Size="1"] > .DualSixth {
+        --Vert-Border: 38vh;
+        --Side-Border: 25vh;
+    }
+
+    #CircleWrapper > .Backing[Size="2"] > .DualSixth {
+        --Vert-Border: 27vh;
+        --Side-Border: 20vh;
+    }
 }

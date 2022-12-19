@@ -12,8 +12,8 @@
 #BackArrow,
 #BackArrow:before,
 #BackArrow:after {
-    width: 3em;
-    height: 3em;
+    width: 3vw;
+    height: 3vw;
     border-top-right-radius: 30%;
 }
 
@@ -30,7 +30,18 @@
 #BackArrow {
     padding: 0;
     top: 50%;
-    margin: -1.5em 0 0;
+    margin: -1.5vw 0 0;
     left: 1.5vw;
     rotate: -90deg;
+    transition: top 100ms ease-in-out;
+}
+
+@media (max-width: 100vh) {
+    #BackArrow {
+        padding: 0;
+        margin: 0;
+        top: 2vw;
+        left: 1.5vw;
+        rotate: -90deg;
+    }
 }

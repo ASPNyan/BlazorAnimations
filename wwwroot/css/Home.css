@@ -17,10 +17,10 @@ body {
     position: absolute;
     top: 1vh;
     left: 50%;
-    margin-left: -25%;
+    margin-left: -50%;
+    width: 100%;
     margin-top: 0;
     border-bottom: 2vh;
-    width: 50%;
     color: var(--Color);
     font-size: 50px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -54,7 +54,7 @@ body {
     transition-timing-function: ease-in-out;
 }
 
-.OtherButton {
+.ProfileButton {
     width: 20vw;
     height: 20vw;
     left: 65vw;
@@ -67,60 +67,155 @@ body {
     transition-timing-function: ease-in-out;
 }
 
+@media (max-width: 100vh) {
+    #HomeText {
+        font-size: 38px;
+    }
+    
+    .ShapesButton {
+        position: absolute;
+        width: 30vw;
+        height: 30vw;
+        left: 50%;
+        margin-left: -15vw;
+        top: 35vh;
+        margin-top: -15vw;
+    }
+    .CirclesButton {
+        position: absolute;
+        width: 30vw;
+        height: 30vw;
+        left: 50%;
+        margin-left: -15vw;
+        top: 60vh;
+        margin-top: -15vw;
+    }
+    .ProfileButton {
+        position: absolute;
+        width: 30vw;
+        height: 30vw;
+        left: 50%;
+        margin-left: -15vw;
+        top: 85vh;
+        margin-top: -15vw;
+    }
+    
+    @media (min-width: 80vh) {
+        .ShapesButton {
+            width: 24vw;
+            height: 24vw;
+            margin-left: -12vw;
+            margin-top: -12vw;
+        }
+        .CirclesButton {
+            width: 24vw;
+            height: 24vw;
+            margin-left: -12vw;
+            margin-top: -12vw;
+        }
+        .ProfileButton {
+            width: 24vw;
+            height: 24vw;
+            margin-left: -12vw;
+            margin-top: -12vw;
+        }
+    }
+    
+    /* Positioning Values */
+    #IndexWrapper[Position="1"] > .ShapesButton {
+        left: 50%;
+        margin-left: -15vw;
+        top: 25vh;
+        margin-top: -15vw;
+    }
+    #IndexWrapper[Position="1"] > .CirclesButton {
+        left: 50%;
+        margin-left: -15vw;
+        top: 50vh;
+        margin-top: -15vw;
+    }
+    #IndexWrapper[Position="1"] > .ProfileButton {
+        left: 50%;
+        margin-left: -15vw;
+        top: 75vh;
+        margin-top: -15vw;
+    }
+    #IndexWrapper[Position="2"] > .ShapesButton {
+        left: 50%;
+        margin-left: -15vw;
+        top: 75vh;
+        margin-top: -15vw;
+    }
+    #IndexWrapper[Position="2"] > .CirclesButton {
+        left: 50%;
+        margin-left: -15vw;
+        top: 25vh;
+        margin-top: -15vw;
+    }
+    #IndexWrapper[Position="2"] > .ProfileButton {
+        left: 50%;
+        margin-left: -15vw;
+        top: 50vh;
+        margin-top: -15vw;
+    }
+    #IndexWrapper[Position="3"] > .ShapesButton {
+        left: 50%;
+        margin-left: -15vw;
+        top: 50vh;
+        margin-top: -15vw;
+    }
+    #IndexWrapper[Position="3"] > .CirclesButton {
+        left: 50%;
+        margin-left: -15vw;
+        top: 75vh;
+        margin-top: -15vw;
+    }
+    #IndexWrapper[Position="3"] > .ProfileButton {
+        left: 50%;
+        margin-left: -15vw;
+        top: 25vh;
+        margin-top: -15vw;
+    }
+}
+
 /* Positioning Values */
 
-#IndexWrapper[Position="1"] > .ShapesButton {
-    left: 15vw;
-    top: 50%;
-    margin-top: -10vw;
-}
+@media (min-width: 100vh) {
+    #IndexWrapper[Position="1"] > .ShapesButton {
+        left: 15vw;
+    }
 
-#IndexWrapper[Position="1"] > .CirclesButton {
-    left: 40vw;
-    top: 50%;
-    margin-top: -10vw;
-}
+    #IndexWrapper[Position="1"] > .CirclesButton {
+        left: 40vw;
+    }
 
-#IndexWrapper[Position="1"] > .OtherButton {
-    left: 65vw;
-    top: 50%;
-    margin-top: -10vw;
-}
+    #IndexWrapper[Position="1"] > .ProfileButton {
+        left: 65vw;
+    }
 
-#IndexWrapper[Position="2"] > .ShapesButton {
-    left: 65vw;
-    top: 50%;
-    margin-top: -10vw;
-}
+    #IndexWrapper[Position="2"] > .ShapesButton {
+        left: 65vw;
+    }
 
-#IndexWrapper[Position="2"] > .CirclesButton {
-    left: 15vw;
-    top: 50%;
-    margin-top: -10vw;
-}
+    #IndexWrapper[Position="2"] > .CirclesButton {
+        left: 15vw;
+    }
 
-#IndexWrapper[Position="2"] > .OtherButton {
-    left: 40vw;
-    top: 50%;
-    margin-top: -10vw;
-}
+    #IndexWrapper[Position="2"] > .ProfileButton {
+        left: 40vw;
+    }
 
-#IndexWrapper[Position="3"] > .ShapesButton {
-    left: 40vw;
-    top: 50%;
-    margin-top: -10vw;
-}
+    #IndexWrapper[Position="3"] > .ShapesButton {
+        left: 40vw;
+    }
 
-#IndexWrapper[Position="3"] > .CirclesButton {
-    left: 65vw;
-    top: 50%;
-    margin-top: -10vw;
-}
+    #IndexWrapper[Position="3"] > .CirclesButton {
+        left: 65vw;
+    }
 
-#IndexWrapper[Position="3"] > .OtherButton {
-    left: 15vw;
-    top: 50%;
-    margin-top: -10vw;
+    #IndexWrapper[Position="3"] > .ProfileButton {
+        left: 15vw;
+    }
 }
 
 /* Roundness Values  */
@@ -192,36 +287,36 @@ body {
     border-bottom-left-radius: 20rem;
 }
 
-.OtherButton[Roundness="1"] {
+.ProfileButton[Roundness="1"] {
     border-radius: 0;
 }
 
-.OtherButton[Roundness="2"] {
+.ProfileButton[Roundness="2"] {
     border-top-left-radius: 5rem;
     border-bottom-left-radius: 5rem;
 }
 
-.OtherButton[Roundness="3"] {
+.ProfileButton[Roundness="3"] {
     border-top-right-radius: 20rem;
     border-bottom-right-radius: 20rem;
 }
 
-.OtherButton[Roundness="4"] {
+.ProfileButton[Roundness="4"] {
     border-top-left-radius: 5rem;
     border-top-right-radius: 5rem;
 }
 
-.OtherButton[Roundness="5"] {
+.ProfileButton[Roundness="5"] {
     border-bottom-left-radius: 20rem;
     border-bottom-right-radius: 20rem;
 }
 
-.OtherButton[Roundness="6"] {
+.ProfileButton[Roundness="6"] {
     border-top-left-radius: 5rem;
     border-bottom-right-radius: 5rem;
 }
 
-.OtherButton[Roundness="7"] {
+.ProfileButton[Roundness="7"] {
     border-top-right-radius: 20rem;
     border-bottom-left-radius: 20rem;
 }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BlazorAnimations.Pages;
+﻿namespace BlazorAnimations.Pages;
 
 public partial class Home
 {
@@ -8,13 +6,25 @@ public partial class Home
     {
         ShapesRoundness = new Random().Next(1, 7);
         CirclesRoundness = new Random().Next(1, 7);
-        OtherRoundness = new Random().Next(1, 7);
-        while (ShapesRoundness == CirclesRoundness || OtherRoundness == CirclesRoundness)
+        ProfileRoundness = new Random().Next(1, 7);
+        while (ShapesRoundness == CirclesRoundness || ProfileRoundness == CirclesRoundness)
             CirclesRoundness = new Random().Next(1, 7);
-        while (CirclesRoundness == ShapesRoundness || CirclesRoundness == OtherRoundness)
+        while (CirclesRoundness == ShapesRoundness || CirclesRoundness == ProfileRoundness)
             CirclesRoundness = new Random().Next(1, 7);
-        while (OtherRoundness == ShapesRoundness || OtherRoundness == CirclesRoundness)
-            OtherRoundness = new Random().Next(1, 7);
+        while (ProfileRoundness == ShapesRoundness || ProfileRoundness == CirclesRoundness)
+            ProfileRoundness = new Random().Next(1, 7);
         StateHasChanged();
+    }
+
+    private string VertColor()
+    {
+        Vert = true;
+        return Position switch
+        {
+            1 => "yellow",
+            2 => "deeppink",
+            3 => "cyan",
+            _ => "white"
+        };
     }
 }

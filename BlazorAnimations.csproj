@@ -21,6 +21,15 @@
       <Compile Update="Pages\TurningCircles.cs">
         <DependentUpon>TurningCircles.razor</DependentUpon>
       </Compile>
+      <Compile Update="Pages\Profile.cs">
+        <DependentUpon>Profile.razor</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="wwwroot\img\ProfilePicture.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
-namespace BlazorAnimations.Pages;
+﻿namespace BlazorAnimations.Pages;
 
 public partial class LivingShapes
 {
