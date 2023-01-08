@@ -1,4 +1,4 @@
-﻿﻿# Disclaimer
+# Disclaimer
 [This deed](../ReadMe.md) and this info page highlights only some of the key features and terms of the actual license. It is not a license and has no legal value. You should carefully review all of the terms and conditions of the actual license before using the licensed material.
 
 Creative Commons is not, nor is ASPNyan, a law firm and does not provide legal services. Distributing, displaying, or linking to this deed or the license that it summarizes does not create a lawyer-client or any other relationship.
