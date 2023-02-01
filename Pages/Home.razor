@@ -48,22 +48,23 @@
         {
             ChangeRound();
             Position++;
-            switch (Position)
-            {
-                case 1:
-                    if (!Vert) TextColor = "deeppink";
-                    break;
-                case 2:
-                    if (!Vert) TextColor = "cyan";
-                    break;
-                case 3:
-                    if (!Vert) TextColor = "yellow";
-                    break;
-                case 4:
-                    Position = 1;
-                    if (!Vert) TextColor = "deeppink";
-                    break;
-            }
+            if (!Vert)
+                switch (Position)
+                {
+                    case 1:
+                        TextColor = "deeppink";
+                        break;
+                    case 2:
+                        TextColor = "cyan";
+                        break;
+                    case 3:
+                        TextColor = "yellow";
+                        break;
+                    case 4:
+                        Position = 1;
+                        TextColor = "deeppink";
+                        break;
+                }
             ChangeRound();
             await Task.Delay(2000);
             ChangeRound();
@@ -88,6 +89,6 @@
     private void GoToProfile()
     {
         Animate = false;
-        NavigationManager.NavigateTo("/Profile");
+        NavigationManager.NavigateTo("https://sebastianricketts.dev/");
     }
 }
